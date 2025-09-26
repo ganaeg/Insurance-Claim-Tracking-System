@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Claim Submission">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Policy #" value={policyNumber} onchange={handlePolicyChange}></lightning-input>
+            <lightning-input label="Claim Amount" type="number" value={claimAmount} onchange={handleAmountChange}></lightning-input>
+            <lightning-textarea label="Description" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+            <lightning-button label="Submit Claim" variant="brand" onclick={handleSubmit}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

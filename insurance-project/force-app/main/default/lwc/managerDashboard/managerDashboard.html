@@ -1,0 +1,30 @@
+<template>
+  <lightning-card title="Manager Dashboard">
+    <div class="slds-p-around_medium">
+      <div class="slds-grid slds-wrap slds-gutters">
+        <div class="slds-col slds-size_1-of-3">
+          <div class="slds-card slds-p-around_small">
+            <div class="slds-text-title">Total Claims</div>
+            <div class="slds-text-heading_large slds-m-top_small">{totalClaims}</div>
+          </div>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+          <div class="slds-card slds-p-around_small">
+            <div class="slds-text-title">Total Amount</div>
+            <div class="slds-text-heading_large slds-m-top_small">{totalAmount}</div>
+          </div>
+        </div>
+        <div class="slds-col slds-size_1-of-3">
+          <div class="slds-card slds-p-around_small">
+            <div class="slds-text-title">Open / Approved</div>
+            <div class="slds-text-heading_large slds-m-top_small">{openVsApproved}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slds-m-top_medium">
+        <canvas class="chart" width="400" height="200"></canvas>
+      </div>
+    </div>
+  </lightning-card>
+</template>

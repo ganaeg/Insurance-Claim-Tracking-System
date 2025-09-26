@@ -1,0 +1,20 @@
+<template>
+  <div class="slds-form-element">
+    <label class="slds-form-element__label">Policy # / Holder</label>
+    <div class="slds-form-element__control">
+      <input class="slds-input" type="text" placeholder="Search policy..." value={searchKey} oninput={handleKeyInput} />
+    </div>
+
+    <template if:true={results}>
+      <ul class="slds-listbox slds-listbox_vertical slds-m-top_small" role="listbox">
+        <template for:each={results} for:item="pol">
+          <li key={pol.Id} class="slds-listbox__item" data-id={pol.Id} data-name={pol.Policy_Number__c} onclick={handleSelect}>
+            <div class="slds-truncate" title={pol.Policy_Number__c + ' - ' + pol.Name}>
+              {pol.Policy_Number__c} — {pol.Name}
+            </div>
+          </li>
+        </template>
+      </ul>
+    </template>
+  </div>
+</template>
